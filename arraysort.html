@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortarr(arr) {
+    for (var i = 0; i < arr.length; i++) {
+      for (var j = i + 1; j < arr.length; j++) {
+        if (arr[i] > arr[j]) {
+          var temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+    return arr;
+  }
+  console.log(sortarr([10, 18, 4, 5, 9, 6, 16, 12]));
+
+
+
+  const num1 = [45, 4, 9, 16, 25];
+const num2 = num1.map(myFunction);
+
+
+function myFunction(value, index, array) {
+  return value * 2;
+  
+}
+     console.log(num2);  
+
+
+
+     const num4 = [45, 4, 9, 16, 25];
+const num5 = num4.forEach(myFunction);
+
+
+function myFunction(value, index, array) {
+  return value * 2;
+  
+}
+     console.log(num5); 
+
+
+
+
+
+
+     
+        
+    
+           </script>
+</body>
+</html>

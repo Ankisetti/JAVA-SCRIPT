@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //array iteration methods//
+        var a = [2, 4, 6, 7, 89, 54, 22, 11, 14, 42];
+        a.forEach(num);
+        function num(values, index, arr) {
+            console.log(values);
+        }
+
+        //map method//
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let points = a.map(numb);
+        function numb(values, index, arr) {
+            return values > 2;
+        }
+        console.log(points);
+
+        //filter method//
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let pnt = a.filter(numbe);
+        function numbe(values, index, arr) {
+            return values < 20;
+        }
+        console.log(pnt);
+
+
+        //reduce method//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let scores = a.reduce(number);
+        function number(total, values, index, arr) {
+            return total + index;
+
+        }
+        console.log(scores);
+
+        // every method//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let scr = a.every(numbers);
+        function numbers(values, index, arr) {
+            return values > 30;
+        }
+        console.log(scr);
+
+        //some method//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let scro = a.some(numbers);
+        function numbers(values, index, arr) {
+            return values > 30;
+        }
+        console.log(scro);
+
+        //index of//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27, 25];
+        let scroe = a.indexOf(numbers);
+        function numbers(values, index, arr) {
+            return index = 25;
+        }
+        console.log(scroe);
+
+        //last indexof//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let src = a.lastIndexOf(numbers);
+        function numbers(values, index, arr) {
+            return values > 30;
+        }
+        console.log(src);
+
+
+        //array find//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let marks = a.find(numbers);
+        function numbers(values, index, arr) {
+            return values > 30;
+        }
+        console.log(marks);
+
+        //find indexOf//
+
+        var a = [2, 4, 6, 7, 87, 56, 32, 25, 27];
+        let mark = a.findIndex(numbers);
+        function numbers(values, index, arr) {
+            return values > 30;
+        }
+        console.log(mark);
+
+
+       //array from//
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

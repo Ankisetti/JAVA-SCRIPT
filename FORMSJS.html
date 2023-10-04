@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        // Initialize an object to store values
+        let formData = {};
+
+        // Get form elements by their IDs
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const submitButton = document.getElementById("submitButton");
+        const outputDiv = document.getElementById("output");
+
+        // Add a click event listener to the Submit button
+        submitButton.addEventListener("click", function() {
+            // Update the object with the current values from the form
+            formData.name = nameInput.value;
+            formData.email = emailInput.value;
+
+            // Display the object's values in the output
+            outputDiv.textContent = JSON.stringify(formData, null, 2);
+        });
+    </script>
+</body>
+</html>

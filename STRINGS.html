@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //string methods//
+       // string length//
+
+    let name ="saisupraja";
+    let length = name.length
+    console.log(length);
+const  myself ="lakshmi sai supraja";
+const len = myself.length;
+console.log(len);
+
+//slice(start,end)//
+//it includes only start position but not end//
+//if we gave only one value it print all other elements that come after the element//
+var text ="movies,webseries,dramas,action";
+var part = text.slice(7,16);
+console.log(part);
+
+//substr//
+//it is similar to slice but the second parameter defines the length//
+//if its negative value it count from the ending of string//
+var things ="bottle,marker,pen,pencil,eraser,plank";
+var part = things.substr(6,5);
+console.log(part);
+
+//replace//
+// this will replace the string value with another value//
+// to replace case-insesnsitive use a regular expression with an /i flag//
+//it is a case sensitive//
+//it matches only first exprresion by using regualar expressions we can replace all//
+// the text written in regular expressions can be done without quotes//
+var company ="welcome to google google is a mnc company work environment in google is so good";
+var cpny = company.replace(/google/g, "tech mahindra");
+console.log(cpny);
+
+//toUpperCase and toLowerCase//
+var block ="walmart";
+var block1 ="accenture";
+var block2 ="capgemini";
+var block3 ="cognizant";
+
+console.log(block2.toUpperCase());
+console.log(block3.toUpperCase());
+console.log(block4.conact(" ",block1," ",block2," ",block3,));
+console.log(block4)
+
+
+    </script>
+</body>
+</html>

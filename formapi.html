@@ -1,0 +1,38 @@
+<!-- registration.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body style="background-color: cornflowerblue; text-align: center;" >
+    <h2 style="text-align: center;">REGISTRATION PAGE</h2>
+    <form id="myform">
+        <label for="USERNAME">USERNAME</label>
+        <input name="username" type="text" id="username" placeholder="enter username"><br>
+        <label for="PASSWORD">PASSWORD</label>
+        <input name="password" type="password" id="password" placeholder="enter your password"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        let form = document.getElementById("myform");
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            let username=document.getElementById("username").value
+            let password=document.getElementById("password").value
+            let obj={
+                "username":username,
+                "password":password
+            }
+            fetch("http://localhost:3000/posts",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(obj)
+            }).then((value)=>value.json()).then((value)=>console.log(value)).catch((error)=>console.error("error:",error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">LOGIN PAGE</h2>
+    
+<div class="container block d-flex justify-content-center align-items-center m-5 p-5">
+    <form action="#" method="POST" id="loginform">
+        <div class="box">
+            <label for="Username">Username</label>
+            <div class="item">
+                <input type="text" name="Username" id="Username">
+            </div>
+        </div>
+        <div class="box">
+            <label for="Password">Password</label>
+            <div class="item">
+                <input type="password" name="Password" id="Password">
+            </div>
+        </div>
+        <div id="loginMessage"></div>
+        <input type="submit" value="Submit" class="btn btn-primary m-3">
+    </form>
+</div>
+
+<script>
+    let form = document.getElementById("loginform");
+    let username = document.getElementById("Username");
+    let passwrd = document.getElementById("Password");
+    let loginMessage = document.getElementById("loginMessage");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let enteredUsername = username.value.trim(); 
+        let enteredPassword = passwrd.value.trim(); 
+
+        fetch("http://localhost:3000/posts", {
+            method: "get"
+        }).then((response) => response.json())
+            .then((data) => {
+                let userFound = false;
+                for (let i = 0; i < data.length; i++) {
+                    if (
+                        data[i].username === enteredUsername &&
+                        data[i].password === enteredPassword
+                    ) {
+                        userFound = true;
+                        break;
+                    }
+                }
+
+                if (userFound) {
+                    loginMessage.textContent = "Login successful!";
+                    loginMessage.style.color = "green";
+                    window.location.href = "loginsucees.html"
+                    
+                } else {
+                    loginMessage.textContent = "Login failed. Incorrect username or password.";
+                    loginMessage.style.color = "red";
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                loginMessage.textContent = "An error occurred while processing your request.";
+                loginMessage.style.color = "red";
+            });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="lname">LAST NAME</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="name">E-MAIl</label>
+        <input type="text" id="name" name="name"><br>
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        document.getElementById("name").value = localStorage.getItem("name");
+        document.getElementById("name").value = localStorage.getItem("lname");
+        document.getElementById("email").value = localStorage.getItem("email");
+       
+        document.getElementById("myform").addEventListener("submit",Function(event))
+            event.preventDefault();
+            var name = document.getElementById("name",name);
+            var lname = document.getElementById("lname",name);
+            var email = document.getElementById("email",email);
+            localStorage.setItem("name",name);
+            localStorage.setItem("name",lname);
+            localStorage.setItem("email",email);
+    
+                
+             </script>
+
+
+</body>
+</html>

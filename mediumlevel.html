@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//     <!-- 1.	Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array. -->
+
+// <!-- Examples : -->
+
+// <!-- toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]] -->
+
+let emptyarray =[];
+obj = {
+   a:1,
+   b:2,
+   c:3
+   }
+//    console.log(obj);
+   for(key in obj){
+    let some=[];
+    some.push(key);
+    some.push(obj[key]);
+    emptyarray.push(some);
+   }
+   console.log(emptyarray);
+
+//    2.	Create a function that takes two numbers as arguments (num, length) 
+//    and returns an array of multiples of num until the array length reaches length.
+
+function arrayOfMultiples(num, length) {
+    const multiplesArray = [];
+    
+    for (let i = 1; i <= length; i++) {
+        multiplesArray.push(num * i);
+    }
+    
+    return multiplesArray;
+}
+
+const result = arrayOfMultiples(7, 5);
+console.log(result); 
+
+// 3.Create the function that takes an array with objects and returns the sum of people's budgets.
+function getBudgets(budgets) {
+  let totalBudget = 0;
+
+  for (let i = 0; i < budgets.length; i++) {
+    totalBudget += budgets[i].budget;
+  }
+
+  return totalBudget;
+}
+
+const budgets = [
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+];
+
+const totalBudget = getBudgets(budgets);
+console.log(totalBudget);
+//4.	Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} 
+//and returns an array of objects like { name: "John", avgNote: 4 }. 
+//If a student has no notes (an empty array) then let's assume avgNote: 0.
+
+function getaveragenote(notes){
+  let avgNote=0;
+  
+  for(let i=0;i<notes.length;i++){
+    avgNote += details[i].notes;
+  }
+  return avgNote;
+}
+const details = [
+  {name: "John", notes: [3, 5, 4]}
+];
+const avgNote = getaveragenote(details);
+console.log(avgNote);
+
+//6.	Count each occurrence of number(can not use predefined function).//
+let numbers = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10]; 
+
+function countOccurrences(arr, val) {
+    let count = 0;  
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === val) {
+            count++;  
+        }
+    }
+    return count; 
+}
+
+let valueToCheck = 7;
+let occurrences = countOccurrences(numbers, valueToCheck);
+console.log(`In the array ${numbers}, the number ${valueToCheck} appears ${occurrences} times.`);
+
+7.//	Write a function that accepts an array of strings. 
+//Return the longest string(can not use predefined function).
+
+
+function longest(strings){
+  var longest = strings[0].length;
+  for(let i=0; i<strings.length;i++){
+    if(strings[i].length >longest){
+      longest=strings[i].length;
+      x=strings[i];
+      // console.log(a[i]);
+    }
+  }
+  return x;
+}
+const a = ['nik','mikhil','cow','elephant'];
+console.log(longest(a));
+
+
+
+
+
+
+    
+
+
+
+
+</script>
+    
+</body>
+</html>
+
+
+

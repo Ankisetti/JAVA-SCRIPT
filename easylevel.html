@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.create a function that takes numbers as 2 arguments and return their sum//
+        function add() {
+            return c;
+        }
+        var a = 20;
+        var b = 35;
+        var c = a + b;
+        console.log(add(c));
+        //2.write a function that takes an integer minutes and convert into seconds//
+        function seconds() {
+            return minutes * 60;
+        }
+        var minutes = 5;
+        console.log(seconds(minutes));
+        //3.create a function that takes number as an argument and increments the number by +1 and return the result//
+        function increment() {
+            return a + 1;
+        }
+        var a = 45;
+        console.log(increment(a));
+        //4.create a function that takes age in years and return age in days//
+        function days() {
+            return ages * 365;
+        }
+        var ages = 21;
+        console.log(days(ages));
+
+        //5.create a function that takes voltage and current and returns the calculated power//
+        function power() {
+            return voltage * current;
+        }
+        var voltage = 3.5;
+        var current = 2.8;
+        var p = voltage * current;
+        console.log(power(p));
+
+        // 6.write a function that returns the string "something" joined with space " " and give the argument a //
+        function something() {
+            return c;
+        }
+        var a = "something";
+        var b = "is better than nothing";
+        var c = a + "  " + b;
+        console.log(something(c));
+        //7.create a function that takes as 2 arguments both arguments are integers a and b. 
+        //Return true if one of them is 10 or if their sum is 10.//
+        function integers() {
+            return number1 === 10 || number2 === 10 || number1 + number2 === 10;
+        }
+        var number1 = 12;
+        var number2 = 15;
+        console.log(integers(a, b))
+        //8.Create a function that takes two strings as arguments and returns either true or false depending on 
+        //whether the total number of characters in the first string is equal to the total number of characters in the second string.
+        function checklength() {
+            return str1.length === str2.length;
+        }
+        var str1 = "hyper text mark up language";
+        var str2 = "cascading style sheets";
+        console.log(checklength(str1, str2));
+        //9.Create a function that takes a name and 
+        //returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
+        const createGreeting = (name) => {
+            return "good morning";
+        }
+
+        const name = "morning";
+        const greeting = createGreeting();
+        console.log(greeting);
+        //11.Create a function that returns an array of strings sorted by length in ascending order.//
+        function ascendingorder(strings) {
+            for (i = 0; i < strings.length; i++) {
+                for (j = i + 1; j < strings.length; j++) {
+                    if (strings[i] > strings[j]) {
+                        c = strings[i];
+                        strings[i] = strings[j];
+                        strings[j] = c;
+                    }
+                }
+            }
+            return strings;
+        }
+        var a = ["aa", "a", "bbbb", "ccc", "dddd",];
+        console.log(ascendingorder(a));
+        //12.Create a function that takes an array of arrays with numbers.//
+        // Return a new (single) array with the largest numbers of each.//
+        //13.Create a function that takes an array of numbers and returns the second largest number//
+        const secondlargest = (arr) => {
+            let first = -1;
+            let second = -1;
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] > first){
+                    second = first;
+                    first = arr[i];
+                } else if(arr[i] > second && arr[i] != first){
+                    second = arr[i];
+                }
+            }
+            return second;
+        }
+        console.log(secondlargest([45,67,100,24,180,78,190,210]));
+        
+        //14.	Create a function that takes an array of items, 
+        //removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+        function removeduplicates(arr){
+            let r =[];
+            for(let i = 0;i<arr.length;i++){
+                if(r[i]==1){
+                    console.log(arr[i]);
+                }
+            }
+            return arr;
+        }
+        var a =[1,0,1,0];
+        console.log(removeduplicates(a));
+        //15.Create a function that takes an array of integers as an argument and returns a unique number from that array. 
+        //All numbers except unique ones have the same number of occurrences in the array.
+        function findUniqueNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+    if (count === 1) {
+      return arr[i];
+    }
+  }
+  return null;
+}
+
+const array1 = [2, 2, 2, 3, 4, 4, 4];
+console.log(findUniqueNumber(array1));
+//16.Create a function that takes two strings as arguments and returns the number of times 
+//the first string (the single character) is found in the second string. //
+function countOccurrences(char, str) {
+  let count = 0;
+  let i = 0;
+  while (i < str.length) {
+    if (str[i] === char) {
+      count++;
+    }
+    i++;
+  }
+  return count;
+}
+
+const charToCount2 = 'c';
+const str3 = 'chamber of secrets';
+console.log(countOccurrences(charToCount2, str3));
+//17.Create a function that takes a string and returns the number (count) of vowels contained within it.//
+        function countvowels(name) {
+            let count = 0;
+            for (let i = 0; i < name.length; i++) {
+                let char = name[i].toLowerCase();
+                if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+                    count++;
+                }
+            }
+            return count;
+        }
+        var names = "celebration";
+        console.log(countvowels(names));
+        18.//	Given a string, create a function to reverse the case. 
+        //All lower-cased letters should be upper-cased, and vice versa.
+        function reverseCase(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (char === char.toUpperCase()) {
+      result += char.toLowerCase();
+    } else {
+      result += char.toUpperCase();
+    }
+  }
+  return result;
+}
+
+const str7 = 'HappY BirTHdAy';
+console.log(reverseCase(str7)); 
+19.//Take one integer n, loop till n and pass each value to a function, 
+//create a function that takes one integer parameter, and multiply with 2 in every integer.
+			
+			//Input:      n=5//
+			//Output:   2 4 6 8 10//
+
+      function multiplyByTwo(num) {
+  return num * 2;
+}
+
+function multiplyUpToN(n) {
+  for (let i = 1; i <= num; i++) {
+    console.log(multiplyByTwo(i));
+  }
+}
+
+const num = 5;
+multiplyUpToN(num);
+
+
+
+        
+        // 20 Create Function that will take one parameter and return type of the data.
+        function getDataType(data) {
+            return typeof data;
+        }
+
+        const testData = 123;
+        const dataType = getDataType(testData);
+        console.log(`The data type is: ${dataType}`);
+        // 21. Program to find greatest of three numbers(using ternery operator).
+        var n1 = 4, n2 = 8, n3 = 6, max;
+        max = (n1 > n2) ? (n1 > n3 ? n1 : n3) :
+            (n2 > n3 ? n2 : n3);
+        console.log("largest number among" + n1 + " ," + n2 + " and " + n3 + " is " + max + " .");
+        //22.Program to find factorial of number.
+        let n = 5;
+        function factorial(n) {
+            if (n == 0) {
+                return 1;
+            }
+            else {
+                return n * factorial(n - 1);
+            }
+        }
+        console.log(factorial(n));
+        //23.Program to arrange numbers in ascending order//
+        function Ascendingorder(numbers) {
+            for (i = 0; i < numbers.length; i++) {
+                for (j = i + 1; j < numbers.length; j++) {
+                    if (numbers[i] > numbers[j]) {
+                        c = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = c;
+                    }
+                }
+            }
+            return numbers;
+        }
+        const  v = [2, 3, 1, 5, 4];
+        console.log(Ascendingorder(v));
+    //    24.// Print Patter using loop.
+
+	// 		1
+	// 		1 2
+	// 		1 2 3
+	// 		1 2 3 4
+  	// 		1 2 3 4 5
+
+      function printPattern2(rows) {
+  let i = 1;
+  while (i <= rows) {
+    let pattern = '';
+    let j = 1;
+    while (j <= i) {
+      pattern += j + ' ';
+      j++;
+    }
+    console.log(pattern);
+    i++;
+  }
+}
+
+const rows2 = 5;
+printPattern2(rows2);
+//25.program to calculate the power of a number using loops only//
+function power(base, exponent) {
+  return base ** exponent;
+}
+
+const base5 = 5;
+const exponent5 = 3;
+console.log(power(base5, exponent5));
+26.//program to check whether given number is prime or not//
+function isPrime1(num) {
+  if (num < 2) return false;
+
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return "it is not a prime number";
+    }
+  }
+  return "it is a prime number";
+}
+
+const num1 = prompt("enter a number");
+console.log(isPrime1(num1)); 
+//27 program to find the lcm of 2 numbers using while loop//
+        var a = 15;
+        var b = 50;
+        var i=1;
+        while(i<=a*b){
+            i++;
+            if(i%a==0 && i%b==0){
+                break;
+            }
+            
+        }
+        console.log("LCM of two numbers is" + i);
+//28. Program to Display Characters from A to Z Using Loop with count.
+//29.find the missing number in an array//
+var nums = [1, 3, 4, 5]; 
+
+var i;
+var sum = 0;
+
+for (i = 0; i < nums.length; i++) {
+    sum = sum + nums[i];
+}
+
+var S;
+S = nums.length + 1;
+var total = (S * (S + 1)) / 2;
+var missing = total - sum;
+console.log(missing);
+30.//Program to count vowels and consonants in a given String.//
+function countVowelsConsonants1(str) {
+  let vowelsCount = 0;
+  let consonantsCount = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i].toLowerCase();
+
+    if (char.match(/[aeiou]/)) {
+      vowelsCount++;
+    } else if (char.match(/[a-z]/)) {
+      consonantsCount++;
+    }
+  }
+
+  return { vowelsCount, consonantsCount };
+}
+
+const str8 = 'iam supraja';
+console.log(countVowelsConsonants1(str8));
+31.//program to insert  the elements of an array for specific index.
+
+function insertElement() {
+    let arr = [1, 2, 3, 4, 5];
+    let index = 2;
+    let element = -99;
+ 
+    arr.splice(index, 0, element);
+     
+    console.log(arr);
+}
+ 
+insertElement();
+//32 reverse a number using while loop//
+        const reverse = (arr) => {
+    let newarr = [];
+    let i = 0;
+    while (i < arr.length) {
+        newarr.push(arr[arr.length - 1 - i]);
+        i++;
+    }
+    return newarr;
+}
+
+console.log(reverse([1, 2, 3]));
+
+//33.Count occurrence of number:
+
+let numbers = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10]; 
+
+function countOccurrences(arr, val) {
+    let count = 0;  
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === val) {
+            count++;  
+        }
+    }
+    return count; 
+}
+
+let valueToCheck = 7;
+let occurrences = countOccurrences(numbers, valueToCheck);
+console.log(`In the array ${numbers}, the number ${valueToCheck} appears ${occurrences} times.`);
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Values Form</title>
+</head>
+<body>
+    <h2>Enter Values:</h2>
+    <form id="valueForm">
+        <input type="text" id="valueInput" placeholder="Enter a value">
+        <button type="button" onclick="addValue()">Add</button>
+    </form>
+
+    <h2>Stored Values:</h2>
+    <ul id="valueList"></ul>
+
+    <script>
+        var values = []; // Array to store values
+
+        function addValue() {
+            var inputValue = document.getElementById("valueInput").value;
+            values.push(inputValue); // Add the value to the array
+            document.getElementById("valueInput").value = ""; // Clear the input field
+            displayValues();
+        }
+
+        function displayValues() {
+            var valueList = document.getElementById("valueList");
+            valueList.innerHTML = ""; // Clear the list
+
+            for (var i = 0; i < values.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = values[i];
+                valueList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

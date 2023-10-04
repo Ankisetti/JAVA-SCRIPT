@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Image</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    
+    <script>
+        fetch("https://fakestoreapi.com/products", {
+            method: "get"
+        }).then(response => response.json()).then((val) => {
+            // Get the table body
+            let tableBody = document.querySelector("tbody");
+            
+            // Iterate over the fetched data
+            for (let i = 0; i < val.length; i++) {
+                // Create a new table row (tr) element
+                let tableRow = document.createElement("tr");
+                
+                // Create a new table cell (td) element and set its content
+                let tableData = document.createElement("td");
+                tableData.innerText = val[i].id;
+                tableRow.appendChild(tableData);
+                let tableData1 = document.createElement("td");
+                tableData1.innerText = val[i].title;
+                tableRow.appendChild(tableData1);
+                let tableData2 = document.createElement("td");
+                tableData2.innerText = val[i].price;
+                tableRow.appendChild(tableData2);
+                let tableData3 = document.createElement("td");
+                tableData3.innerText = val[i].description;
+                tableRow.appendChild(tableData3);
+                let tableData4 = document.createElement("td");
+                tableData4.innerText = val[i].category;
+                tableRow.appendChild(tableData4);
+                let tableData5 = document.createElement("td");
+                tableData5.innerText = val[i].rating.rate;
+
+
+                
+                tableRow.appendChild(tableData5);
+                
+                // Append the table row to the table body
+                tableBody.appendChild(tableRow);
+                
+                // Create an image element for the image column
+                let imgCell = document.createElement("td");
+                let img = document.createElement("img");
+                img.setAttribute("src", val[i].image);
+                img.style.width = "80px";
+                img.style.height = "80px";
+                
+                // Append the image to its cell and then to the row
+                imgCell.appendChild(img);
+                tableRow.appendChild(imgCell);
+                
+            }
+        })
+        .catch(error => console.error(error));
+    </script>
+</body>
+</html>

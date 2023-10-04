@@ -1,0 +1,104 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "SUPRAJA",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "username": "SUPRAJA",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "username": "balasree",
+      "password": "bala@1234",
+      "id": 5
+    },
+    {
+      "username": "balasree",
+      "password": "bala@1234",
+      "id": 6
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 9
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 12
+    },
+    {
+      "username": "archana",
+      "password": "achu@1234",
+      "id": 13
+    },
+    {
+      "username": "archana",
+      "password": "achu@1234",
+      "id": 14
+    },
+    {
+      "username": "archana",
+      "password": "achu@1234",
+      "id": 15
+    },
+    {
+      "username": "archana",
+      "password": "achu@1234",
+      "id": 16
+    },
+    {
+      "username": "mahendra",
+      "password": "mahi@123",
+      "id": 17
+    },
+    {
+      "username": "lakshmi",
+      "password": "azxc@123",
+      "id": 18
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

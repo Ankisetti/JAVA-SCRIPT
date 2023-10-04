@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: chartreuse;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        input {
+            width: 300px;
+            height: 20px;
+            margin-left: 30px;
+        }
+
+        .fgh {
+            margin-left: 50px;
+        }
+
+        .gbn {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validateForm() {
+            //collect form data in JavaScript variables  
+            var pw1 = document.getElementById("pswd1").value;
+            var pw2 = document.getElementById("pswd2").value;
+            var name1 = document.getElementById("fname").value;
+            var name2 = document.getElementById("lname").value;
+            var name3 = document.getElementById("Gender").value;
+            var name4 = document.getElementById("education").value;
+            var name5 = document.getElementById("Date Of Birth").value;
+
+
+            //check empty first name field  
+            if (name1 == "") {
+                document.getElementById("blankMsg").innerHTML = "**Fill the first name";
+                return false;
+            }
+
+            //character data validation  
+            if (!isNaN(name1)) {
+                document.getElementById("blankMsg").innerHTML = "**Only characters are allowed";
+                return false;
+            }
+
+            //character data validation  
+            if (!isNaN(name2)) {
+                document.getElementById("charMsg").innerHTML = "**Only characters are allowed";
+                return false;
+            }
+
+            //check empty password field  
+            if (pw1 == "") {
+                document.getElementById("message1").innerHTML = "**Fill the password please!";
+                return false;
+            }
+
+            //check empty confirm password field  
+            if (pw2 == "") {
+                document.getElementById("message2").innerHTML = "**Enter the password please!";
+                return false;
+            }
+
+            //minimum password length validation  
+            if (pw1.length < 8) {
+                document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+                return false;
+            }
+
+            //maximum length of password validation  
+            if (pw1.length > 15) {
+                document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
+                return false;
+            }
+
+            if (pw1 != pw2) {
+                document.getElementById("message2").innerHTML = "**passwords are not same";
+                return false;
+            } else {
+                alert("your password created succesfully");
+            }
+            alert("form has been succesfully submitted");
+        }
+    </script>
+
+    <body>
+        <h1 style="color:green">LOGIN FORM</h1>
+
+
+        <form onsubmit="return validateForm()">
+
+
+
+
+            <td> First Name</td>
+            <input type="text" id="fname" value="">
+
+            <span id="blankMsg" style="color:red"> </span><br>
+
+
+
+            <td> Last Name</td>
+            <input type="text" id="lname" value="" class="fgh">
+
+            <span id="charMsg" style="color:red"> </span><br>
+
+
+
+
+            <td> Create Password </td>
+            <input type="password" id="pswd1" value="">
+
+            <span id="message1" style="color:red"> </span><br>
+
+
+
+            <td> Confirm Password </td>
+            <input type="password" id="pswd2" value="">
+
+            <span id="message2" style="color:red"> </span><br>
+
+            <td>Date Of Birth</td>
+            <input type="date" id="birthday" name="birthday" class="gbn">
+            <span id="message4" style="color: red;"></span><br>
+
+
+
+            <td>Gender</td>
+            <label for="GENDER"></label>
+            <select id="Gender" name="Gender">
+                <option value="MALE">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+            </select><br>
+            <span id="message3" style="color: green"></span>
+
+
+
+            <td>education</td>
+            <label for="Qualification"></label>
+            <select id="education" name="education">
+                <option value="Degree">DEGREE</option>
+                <option value="B.TECH">B.TECH</option>
+                <option value="B.PHARM">B.PHARM</option>
+                <option value="M.SC">M.SC</option>
+                <option value="B.E">B.E</option>
+                <option value="B.A">B.A</option>
+            </select><br>
+            <span id="message3" style="color: green"></span>
+
+
+
+
+
+            <button type="submit" value="Submit">Submit</button>
+
+
+
+            <button type="reset" value="Reset">Reset</button>
+        </form>
+
+    </body>
+
+</html>
+
+</script>
+</body>
+
+</html>

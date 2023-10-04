@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: lightpink;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">CLOTHING STORE APP</h1>
+    <li>
+        <ul>
+
+        </ul>
+    </li>
+   <script>
+    let c = localStorage.getItem("hello");
+   // console.log(c);
+
+    let h = JSON.parse(c);
+    console.log(h);
+    
+    let unlist = document.querySelector("ul");
+    for(i=0;i<h.length;i++){
+        let list1=document.createElement("li");
+        list1.innerText=h[i].id
+        unlist.appendChild(list1)
+        let list2=document.createElement("li")
+        list2.innerText=h[i].title
+        unlist.appendChild(list2)
+        let list3=document.createElement("li")
+        list3.innerText=h[i].price
+        unlist.appendChild(list3)
+        let list4=document.createElement("li")
+        list4.innerText=h[i].description
+        unlist.appendChild(list4)
+        let list5=document.createElement("li")
+        list5.innerText=h[i].category
+        unlist.appendChild(list5)
+        
+        let img1=document.createElement("img")
+        img1.setAttribute("src",h[i].image);
+        img1.style.width="300px";
+        img1.style.height="300px";
+        unlist.appendChild(img1);
+        let list6=document.createElement("li")
+        list6.innerText=h[i].rating.rate
+        unlist.appendChild(list6)
+        let list7=document.createElement("li")
+        list7.innerText=h[i].rating.count
+        unlist.appendChild(list7)
+
+
+    }
+
+   </script> 
+</body>
+</html>

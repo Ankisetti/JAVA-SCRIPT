@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a="this is the  length array method";
+        console.log(a.length);
+        const cars=["benz","ferari","audi","jaguar"];
+        console.log(cars[1].length);
+        console.log(cars[2].length);
+        console.log(cars[3].length);
+        console.log(cars[0].length);
+
+
+//array to string method//
+        var list = ["movies","webseries","shortfilms","music","games","dramas"];
+        console.log(list.toString(" "));
+
+// join method//
+const vegetables=["carrot","cucumber","tomoto","beans","bittergourd"];
+console.log(vegetables.join(" "));
+//pop and push methods//
+const names=["supraja","sruthi","swetha","vimala","archana"];
+console.log(names.pop());
+console.log(names);
+console.log(names.push("srikanya"));
+console.log(names);
+
+//shift and unshift methods//
+const mobiles=["redmi","oppo","vivo","samsung","realme","oneplus"];
+console.log(mobiles.shift());
+console.log(mobiles);
+console.log(mobiles.unshift("nokiya"));  
+console.log(mobiles);
+
+//delete method//
+const numbers=["1","2","3","4","5","6","7"];
+console.log("the numbers is" + numbers[0]);
+
+
+//concating the arrays//
+const cities=["hyderabad","bangolore","chennai","mysore","delhi"];
+const places=["charminar","redfort","tankbund","biralmandir","cablebridge"];
+const famous=cities.concat(places);
+console.log(famous);
+
+//flatting an array//
+const ids=[[2,4],1,2,["deer"],3,2,4,2,5];
+const newArr=ids.flat();
+console.log(newArr);
+
+//splice//
+const metrics=["pen","pencil","eraser","sharpner","plank"];
+metrics.splice(1,3,"markers");
+console.log(metrics);
+
+//slice method//
+const things=["table","desk","duster","board","benches","ground"];
+ const items=things.slice(2,4);
+ 
+console.log(items);
+
+
+  </script>
+</body>
+</html>
