@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Resume</title>
+    <style>
+         table, th, td {
+            border:1px solid black;
+         }
+    </style>
+</head>
+<body>
+    <p id="name" style="text-align: center;">ANKISETTI LAKSHMI SAI SUPRAJA</p>
+    <p id="email">E-Mail id: supraja705@gmail.com</p>
+    <p id="contact">Mobile No: 8340882729</p>
+    <p id="short"><strong>Career Objective:</strong> Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage my learnings.</p>
+    <p><strong><u>ACADEMICS:</u></strong></p>
+    <table>
+        <tr>
+            <th>Qualification</th>
+            <th>Institute</th>
+            <th>University/Board</th>
+            <th>Course-Duration</th>
+            <th>Percentage/c.g.p.a</th>
+        </tr>
+        <tr>
+            <td>B.Tech</td>
+            <td>Sri sunflower college of engineering and technology</td>
+            <td>J.N.T.U.K</td>
+            <td>2019-2023</td>
+            <td>7.20</td>
+        </tr>
+        <tr>
+            <td>Intermediate</td>
+            <td>Sri viswa vishaka junior college</td>
+            <td>Board of intermediate education</td>
+            <td>2017-2019</td>
+            <td>7.76</td>
+        </tr>
+        <tr>
+            <td>Secondary Education(10TH)</td>
+            <td>Municipal high school</td>
+            <td>Board of secondary education</td>
+            <td>2016-2017</td>
+            <td>8.8</td>
+        </tr>
+    </table>
+    <p><strong>PROJECTS</strong></p>
+    <p id="major"><strong>Major project:</strong></p>
+    <p id="project-name">Object Detection using Deep Learning</p>
+    <ul id="myList"></ul>
+    <h4 id="skills">Technical Skills:</h4>
+    <h4 id="Languages">Programming Languages: Python</h4>
+    <h4 id="web">Html, Css, Js</h4>
+    <h4 id="pack">M.S word, M.S excel, M.S powerpoint</h4>
+    <p id="certify">Certifications:</p>
+    <ul id="MYLIST"></ul>
+    <P id="profile">Personal Profile:</P>
+                <P id="dob">D.O.B-13-4-2002</P>
+                <P id="father">Father's Name:A.Srinivasa Rao</P>
+                <P id="gend">Gender:Female</P>
+                <P id="nation">Nationality-Indian</P>
+                <P id="lang">Languages Known:Telugu,Hindi,English</P>
+                <P id="addr">Address:11-101,Cherukupalli,Bapatla District</P>
+                <P id="decl">DECLARATION:</P>
+<P id="info">I here by declare that particulars of facts and information stated are true,correct and complete to best of my knowledge</P>
+<p id="plc">place:KPHB</p>
+
+
+    <script>
+        document.getElementById("project-name").style.fontWeight = "bold";
+        document.getElementById("skills").style.fontWeight = "bold";
+        document.getElementById("certify").style.fontWeight = "bold";
+        const paragraphs = document.getElementsByTagName("p");
+        for (const paragraph of paragraphs) {
+            paragraph.style.fontWeight = "bold";
+        }
+
+        const myList = document.getElementById("myList");
+        const items = [
+            "It is the process of finding and recognizing real-world object instances.",
+            "It is useful in applications like image retrieval, security, surveillance, and advanced driver assistance systems.",
+            "It can be done in many ways like future object detection, Viola-Jones object detection, SVM classification with HOG features, and deep learning object detection.",
+            "The algorithms and libraries we used in object detection are OpenCV and YOLO."
+        ];
+
+        for (const itemText of items) {
+            const listItem = document.createElement("li");
+            listItem.textContent = itemText;
+            myList.appendChild(listItem);
+        }
+
+        const MYLIST = document.getElementById("MYLIST");
+        const items1 = [
+            "Certified by Chekumukhi talent test at mandal level",
+            "Certified by engineers day online quiz by SNS COLLEGE OF TECHNOLOGY",
+            "Certified by APPSDC machine learning with python",
+            "Project completion certificate by shiash info solutions pvt.ltd, Chennai",
+            "Internship completion certificate by shiash info solutions pvt.ltd, Chennai"
+        ];
+
+        for (const itemText of items1) {
+            const listItem = document.createElement("li");
+            listItem.textContent = itemText; 
+            MYLIST.appendChild(listItem); 
+        }
+        document.getElementById("dob").style.fontWeight = "normal";
+        document.getElementById("father").style.fontWeight = "normal";
+        document.getElementById("gend").style.fontWeight = "normal";
+        document.getElementById("nation").style.fontWeight = "normal";
+        document.getElementById("lang").style.fontWeight = "normal";
+        document.getElementById("addr").style.fontWeight = "normal";
+        document.getElementById("decl").style.fontWeight = "normal";
+        document.getElementById("info").style.fontWeight = "normal";
+        document.getElementById("plc").style.fontWeight = "normal";
+        
+    </script>
+</body>
+</html>

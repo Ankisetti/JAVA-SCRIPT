@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ascendingorder(arr){
+    for(i=0;i<arr.length;i++){
+        for(j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                let temp= arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+            
+        }
+        
+    }
+    return arr;
+}
+let a=[45,25,28,76,56,45,90,78];
+console.log(ascendingorder(a));
+
+//print the strngs in ascending order//
+function ASCENDINGORDER(strings){
+    for(i=0;i<strings.length;i++){
+        for(j=i+1;j<strings.length;j++){
+            if(strings[i]>strings[j]){
+                let temp = strings[i];
+                strings[i]=strings[j];
+                strings[j]=temp;
+            }
+        }
+    }
+    return strings;
+}
+let b=["supraja","sudheer","naveen","naresh","srilekha","gilsey"];
+console.log(ASCENDINGORDER(b));
+
+
+//count the vowels//
+function countvowels(string){
+    var listofvowels = "aAeEiIoOuU";
+    var count =0;    
+    for (var i = 0; i < string.length; i++) {
+        if (listofvowels.includes(string[i])) {
+            count++;
+        }
+    }
+    
+    return count; 
+}
+    
+
+let d="cascading style sheets";
+console.log(countvowels(d));
+    </script>
+</body>
+</html>

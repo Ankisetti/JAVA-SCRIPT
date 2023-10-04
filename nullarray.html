@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+    
+</head>
+<body>
+    <script>
+        function arrayLength(arr) {
+  let count = 0;
+  while (arr[count] !== undefined) {
+    count++;
+  }
+  return count;
+}
+
+const myArray = ["pens","pencils","duster","watch","markers","eraser","bottle"];
+const length = arrayLength(myArray);
+console.log(length);
+
+
+function removecharacters(inputString) {
+  let result = '';
+
+  for (let i = 0; i < inputString.length; i++) {
+
+    if (inputString[i] < '0' || inputString[i] > '9') {
+      result = inputString[i];
+    }
+  }
+
+  return result;
+}
+
+const input = "hello supraja 456 welcome to the 455678 2024";
+const output =removecharacters (input);
+console.log(output);
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center the form on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+   
+    <form id="myForm">
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName" name="firstName" maxlength="15" minlength="2"></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName" name="lastName" maxlength="15" minlength="2"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" maxlength="50" minlength="5"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" maxlength="20" minlength="8"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Confirm Password:</label></td>
+                <td><input type="password" id="password" name="password" maxlength="20" minlength="8"></td>
+                
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </td>
+                <td>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="qualification">Qualification:</label></td>
+                <td>
+                    <select id="qualification" name="qualification">
+                        <option value="Degree">Degree</option>
+                        <option value="B.tech">B.tech</option>
+                        <option value="M.tech">M.tech</option>
+                        <option value="B.pharm">B.pharm</option>
+                        <option value="M.sc">M.sc</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" id="submitButton">Submit</button>
+        <button type="reset" id="resetButton">Reset</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var qualification = document.getElementById("qualification").value;
+
+            if (firstName === "") {
+                alert("Please fill in your First Name");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (lastName === "") {
+                alert("Please fill in your Last Name");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (email === "") {
+                alert("Please fill in your Email");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (password === "") {
+                alert("Please fill in your Password");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (!gender) {
+                alert("Please select your Gender");
+                event.preventDefault(); // Prevent form submission
+            }
+
+            if (qualification === "Select") {
+                alert("please select your qualfication");
+            event.preventDefault(); // Prevent form submission
+            }
+        });
+        window.open()
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [84,12,9,64,32,11,13,12,96,67];
+        let swap;
+        for(let i = 0; i < arr.length; i++){
+            for(let j = i; j < arr.length; j++){
+                if(arr[i] > arr[j]){
+                    swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
+            }
+        }
+        console.log(arr);
+
+        const reverse = (arr) => {
+            let newArr = [];
+            for(let i = 0; i < arr.length; i++){
+                newArr.push(arr[arr.length - 1 - i]);
+            }
+            return newArr;
+        }
+        console.log(reverse([3,5,89,67,43,12,34,56,76,92]));
+
+        const secondlargest = (arr) => {
+            let first = -1;
+            let second = -1;
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] > first){
+                    second = first;
+                    first = arr[i];
+                } else if(arr[i] > second && arr[i] != first){
+                    second = arr[i];
+                }
+            }
+            return second;
+        }
+        console.log(secondlargest([45,67,100,24,180,78,190,210]));
+    </script>
+</body>
+</html>

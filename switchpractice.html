@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function demo(number){
+        switch(number){
+            case 1: return "one";
+                break;
+            case 2: return "two";
+                break;
+            case 3: return "three";
+                break; 
+            case 4: return "four";
+                break; 
+            case 5: return "five";
+                break;
+                default:
+                    "invalid number";
+        }
+    }
+        console.log(demo(5));
+        console.log(demo(6));
+
+        //example2//
+        function months(days){
+            switch(days){
+                case 1:
+                    "january";
+                case 2:
+                    "march";
+                case 3:
+                    "may";  
+                case 4:
+                    "july";
+                case 5:
+                    "august";
+                case 6:
+                    "october";
+                case 7:
+                    "december";
+                    return 31;
+                case 8:
+                    "april";
+                 case 9:
+                    "june";
+                case 10:
+                    "september";
+                case 11:
+                    "november";
+                    return 30;
+                case 12:
+                    "febrauary";
+                    return 28;
+
+
+            }
+        }
+        console.log(months(5));
+    </script>
+</body>
+</html>

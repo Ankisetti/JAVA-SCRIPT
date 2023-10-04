@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Product Details</h2>
+    
+    <div id="product-details-container" style="text-align: center;">
+        <h3>Product ID: 1 <span id="id"></span></h3>
+        <h3>Product Title:<span id="title"></span></h3>
+        <h3>Description: <span id="description"></span></h3>
+        <h3>Category: <span id="category"></span></h3>
+        <h3>Rating: <span id="rating"></span></h3>
+        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Product Image" id="image">
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const productTitle = urlParams.get('title');
+        const productRating = urlParams.get('rating');
+        const productImage = urlParams.get('image');
+        const productCategory = urlParams.get('category');
+        const productDescription = urlParams.get('description');
+
+        // Display product details on the page
+        document.getElementById('id').innerText = productId;
+        document.getElementById('title').innerText = productTitle;
+        document.getElementById('description').innerText = productDescription;
+        document.getElementById('category').innerText = productCategory;
+        document.getElementById('rating').innerText = productRating;
+        document.getElementById('image').src = productImage;
+    </script>
+</body>
+</html>

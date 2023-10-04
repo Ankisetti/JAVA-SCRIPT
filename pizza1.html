@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">PIZZA STORE API COLLECTIONS</h2>
+    <ul>
+        <li>
+
+        </li>
+    </ul>
+    <script>
+        let c=localStorage.getItem("api")
+        //console.log(c);//
+        let v=JSON.parse(c)
+        console.log(c);
+
+        let unlisted = document.querySelector("ul")
+        for(i=0;i<v.length;i++){
+        let list1=document.createElement("li");
+        list1.innerText=v[i].id
+        unlisted.appendChild(list1)
+        let list2=document.createElement("li");
+        list2.innerText=v[i].title
+        unlisted.appendChild(list2)
+        
+        let img1=document.createElement("img")
+        img1.setAttribute("src",v[i].images);
+        img1.style.width="300px";
+        img1.style.height="300px";
+        unlisted.appendChild(img1);
+        let list3=document.createElement("li");
+        list3.innerText=v[i].price
+        unlisted.appendChild(list3)
+        let list4=document.createElement("li");
+        list4.innerText=v[i].description
+        unlisted.appendChild(list4)
+        let list5=document.createElement("li");
+        list5.innerText=v[i].creationAt
+        unlisted.appendChild(list5)
+        let list6=document.createElement("li");
+        list6.innerText=v[i].updatedAt
+        unlisted.appendChild(list6)
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
