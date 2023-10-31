@@ -19,8 +19,7 @@ obj = {
    b:2,
    c:3
    }
-//    console.log(obj);
-   for(key in obj){
+for(key in obj){
     let some=[];
     some.push(key);
     some.push(obj[key]);
@@ -115,7 +114,31 @@ function longest(strings){
 }
 const a = ['nik','mikhil','cow','elephant'];
 console.log(longest(a));
+//9.	Write Program to remove duplicate elements in an array and 
+//sort it in descending order(can not use predefined function).
+function removeDuplicatesAndSort(arr) {
+    // Remove duplicates using Set
+    const uniqueElements = [...new Set(arr)];
 
+    // Sort the unique elements in descending order
+    uniqueElements.sort((a, b) => b - a);
+
+    return uniqueElements;
+}
+
+const arr = [3, 1, 5, 2, 2, 3, 4, 5];
+const result1 = removeDuplicatesAndSort(arr);
+console.log('Result 1:', result1);
+//11.	Write Program to remove duplicate elements in an array 
+//and sort it in Accending order(can not use predefined function).
+function duplicatesremove(array){
+  const unique=[...new Set(array)];
+  unique.sort((a,b)=>a-b);
+  return unique;
+}
+const array=['Z','A','P','C','A','Z','K','C','A'];
+const result2 = duplicatesremove(array);
+console.log('RESULT2:',result2);
 
 
 
